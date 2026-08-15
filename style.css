@@ -70,15 +70,15 @@ h3{font-size:28px}
 
 .tulip-bouquet {
   position: relative;
-  width: 260px;
-  height: 300px;
+  width: 300px;
+  height: 330px;
   margin: 0 auto 18px;
 }
 
 /* Individual tulip */
 .tulip {
   position: absolute;
-  bottom: 72px;
+  bottom: 78px;
   left: 50%;
   width: 30px;
   height: 64px;
@@ -133,10 +133,72 @@ h3{font-size:28px}
   position: absolute;
   left: 50%;
   top: 0;
-  width: 48px;
-  height: 57px;
+  width: 54px;
+  height: 64px;
   transform: translateX(-50%);
-  border-radius: 48% 48% 42% 42%;
+
+  /* A more tulip-like silhouette */
+  border-radius: 50% 50% 42% 42%;
+  
+  background:
+    linear-gradient(
+      105deg,
+      #fff7f8 0%,
+      #ffd6e0 25%,
+      #f58fa9 60%,
+      #d85c7d 100%
+    );
+
+  box-shadow:
+    inset 8px 0 0 rgba(255,255,255,.30),
+    inset -6px -7px 12px rgba(166,45,82,.13),
+    0 8px 18px rgba(0,0,0,.15);
+
+  overflow: visible;
+}
+
+/* Center petal */
+.tulip .head::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  width: 25px;
+  height: 45px;
+  transform: translateX(-50%);
+
+  background: inherit;
+
+  border-radius: 50% 50% 35% 35%;
+
+  box-shadow:
+    inset 3px 0 4px rgba(255,255,255,.20);
+}
+
+/* Tulip side petals */
+.tulip .head::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  bottom: -3px;
+  height: 35px;
+
+  background: inherit;
+
+  border-radius:
+    0 0 55% 55%;
+
+  clip-path: polygon(
+    0 0,
+    24% 35%,
+    50% 0,
+    76% 35%,
+    100% 0,
+    91% 100%,
+    9% 100%
+  );
+}
 
   /* Default soft pink */
   background:
