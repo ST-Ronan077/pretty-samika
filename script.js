@@ -38,11 +38,26 @@ document.querySelectorAll("[data-next]").forEach(btn=>{
   btn.addEventListener("click",()=>show(btn.dataset.next));
 });
 
-const songUrl = "https://youtu.be/MqzV4hbu8E";
-document.getElementById("youtubeBtn").addEventListener("click",()=>{
-  window.open(songUrl,"_blank","noopener,noreferrer");
-  document.getElementById("toast").classList.add("show");
-  setTimeout(()=>document.getElementById("toast").classList.remove("show"),2800);
+const playSongBtn = document.getElementById("playSongBtn");
+const loveSong = document.getElementById("loveSong");
+
+playSongBtn.addEventListener("click", async () => {
+    try {
+        if (loveSong.paused) {
+            await loveSong.play();
+            playSongBtn.textContent = "♫ Our song is playing";
+        } else {
+            loveSong.pause();
+            playSongBtn.textContent = "♫ Play our song";
+        }
+    } catch (error) {
+        console.error("Song could not play:", error);
+        playSongBtn.textContent = "Song couldn't play";
+    }
+});
+
+loveSong.addEventListener("ended", () => {
+    playSongBtn.textContent = "♫ Play our song";
 });
 
 const record = document.querySelector(".record");
