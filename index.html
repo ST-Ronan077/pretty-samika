@@ -102,20 +102,38 @@
     </section>
 
     <!-- 5. MUSIC -->
-    <section class="screen" id="musicScreen">
-      <div class="glass card music-card">
-        <div class="record">
-          <div class="record-center">♫</div>
+<section class="screen" id="musicScreen">
+    <div class="glass card music-card">
+
+        <div class="disc">
+            <div class="record-center">♫</div>
         </div>
+
         <p class="eyebrow">03 · Our song</p>
-        <h2>Press play and stay here for a moment.</h2>
-        <p>Press play to open our song in YouTube. Come back here when you're ready for the last surprise.</p>
+
+        <h2>Can't help falling in love with you.</h2>
+
+        <p>
+            Some songs are just songs.
+            This one reminds me of you.
+        </p>
+
         <div class="music-actions">
-          <button class="primary" id="youtubeBtn">Play our song ↗</button>
-          <button class="secondary" data-next="finalScreen">I'm ready →</button>
+            <button class="primary" id="playSongBtn">
+                ♫ Play our song
+            </button>
+
+            <button class="secondary" data-next="finalScreen">
+                I'm ready for the last surprise →
+            </button>
         </div>
-      </div>
-    </section>
+
+        <audio id="loveSong" preload="auto">
+            <source src="cant help but falling in love.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+</section>
 
     <!-- 6. FINALE -->
     <section class="screen" id="finalScreen">
