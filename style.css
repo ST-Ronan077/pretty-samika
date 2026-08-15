@@ -62,3 +62,104 @@ h3{font-size:28px}
 .music-toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);background:#f6eee4;color:#17301f;padding:10px 16px;border-radius:999px;font-size:13px;opacity:0;transition:.3s;z-index:20}.music-toast.show{opacity:1;transform:translate(-50%,0)}
 @keyframes spin{to{transform:rotate(360deg)}}
 @media(max-width:700px){.screen{padding:28px 16px}.card,.wide{padding:26px 20px;border-radius:22px}.section-head{align-items:start;flex-direction:column}.bouquet-stage{height:360px}.bouquet{transform:scale(.82)}h1{font-size:52px}.letter{font-size:20px}.music-btn{width:100%}}
+
+
+/* Tulip bouquet */
+.tulip-bouquet {
+  position: relative;
+  width: 230px;
+  height: 270px;
+  margin: 0 auto 18px;
+}
+.tulip {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  width: 30px;
+  height: 62px;
+  transform-origin: bottom center;
+  animation: tulipSway 3.6s ease-in-out infinite;
+}
+.tulip .stem {
+  position: absolute;
+  left: 13px;
+  top: 42px;
+  width: 4px;
+  height: 100px;
+  border-radius: 4px;
+  background: #4f8a4b;
+}
+.tulip .leaf {
+  position: absolute;
+  top: 88px;
+  width: 36px;
+  height: 17px;
+  border-radius: 100% 0 100% 0;
+  background: #5d9c54;
+}
+.tulip .leaf.left { right: 8px; transform: rotate(25deg); }
+.tulip .leaf.right { left: 5px; transform: scaleX(-1) rotate(20deg); }
+.tulip .head {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 46px;
+  height: 55px;
+  transform: translateX(-50%);
+  border-radius: 48% 48% 45% 45%;
+  background: linear-gradient(100deg, #ffb2c2, #f36b8d 55%, #d94f74);
+  box-shadow: inset 7px 0 0 rgba(255,255,255,.18), 0 7px 16px rgba(0,0,0,.12);
+}
+.tulip .head::before,
+.tulip .head::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 23px;
+  height: 30px;
+  background: inherit;
+}
+.tulip .head::before {
+  left: 2px;
+  border-radius: 0 0 100% 0;
+  transform: rotate(10deg);
+}
+.tulip .head::after {
+  right: 2px;
+  border-radius: 0 0 0 100%;
+  transform: rotate(-10deg);
+}
+.tulip.t1 { transform: translateX(-92px) rotate(-9deg); animation-delay: -.4s; }
+.tulip.t2 { transform: translateX(-57px) rotate(-5deg); animation-delay: -.9s; }
+.tulip.t3 { transform: translateX(-22px) rotate(1deg); animation-delay: -.2s; }
+.tulip.t4 { transform: translateX(16px) rotate(5deg); animation-delay: -1.1s; }
+.tulip.t5 { transform: translateX(52px) rotate(9deg); animation-delay: -.7s; }
+.tulip.t6 { transform: translateX(-40px) translateY(-30px) rotate(-2deg); animation-delay: -1.5s; }
+.tulip.t7 { transform: translateX(5px) translateY(-34px) rotate(3deg); animation-delay: -1.9s; }
+.tulip.t8 { transform: translateX(38px) translateY(-25px) rotate(7deg); animation-delay: -1.3s; }
+
+.tulip-wrap {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 150px;
+  height: 80px;
+  transform: translateX(-50%);
+}
+.tulip-wrap::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 145px;
+  height: 65px;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #d6a06a, #b97845);
+  clip-path: polygon(10% 10%, 90% 10%, 78% 100%, 22% 100%);
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.16);
+}
+@keyframes tulipSway {
+  0%,100% { margin-top: 0; }
+  50% { margin-top: -4px; }
+}

@@ -38,7 +38,7 @@ document.querySelectorAll("[data-next]").forEach(btn=>{
   btn.addEventListener("click",()=>show(btn.dataset.next));
 });
 
-const songUrl = "https://youtu.be/MaqzV4hbu8E";
+const songUrl = "https://youtu.be/MqzV4hbu8E";
 document.getElementById("youtubeBtn").addEventListener("click",()=>{
   window.open(songUrl,"_blank","noopener,noreferrer");
   document.getElementById("toast").classList.add("show");
