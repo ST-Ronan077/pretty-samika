@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Pretty Samika 🌸</title>
+  <meta name="description" content="A little digital bouquet made with love.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="petals" aria-hidden="true"></div>
+
+  <main id="app">
+    <!-- 1. LOCK -->
+    <section class="screen active" id="lockScreen">
+      <div class="glass card lock-card">
+        <div class="mini-flower">✿</div>
+        <p class="eyebrow">A little something from</p>
+        <h1>Shrawan</h1>
+        <p class="to-line">for <strong>Pretty Samika</strong></p>
+        <p class="hint">There is a tiny secret waiting inside.</p>
+
+        <div class="pin" id="pin" aria-label="4 digit code">
+          <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="keypad">
+          <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+          <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+          <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+          <button class="ghost"></button><button data-key="0">0</button><button id="backspace">⌫</button>
+        </div>
+
+        <p class="error" id="pinError">Almost. Try again, love ♡</p>
+      </div>
+    </section>
+
+    <!-- 2. INTRO -->
+    <section class="screen" id="introScreen">
+      <div class="glass card intro-card">
+        <div class="envelope">💌</div>
+        <p class="eyebrow">Unlocked</p>
+        <h2>For the girl who makes ordinary moments feel special.</h2>
+        <p>Take your time. This little page was made just for you.</p>
+        <button class="primary" data-next="bouquetScreen">Open your gift <span>→</span></button>
+      </div>
+    </section>
+
+    <!-- 3. BOUQUET -->
+    <section class="screen" id="bouquetScreen">
+      <div class="wide glass card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">01 · Bouquet</p>
+            <h2>A bouquet that will never wilt.</h2>
+          </div>
+          <button class="music-btn" id="musicBtn">♫ Play our song</button>
+        </div>
+
+        <div class="bouquet-stage">
+          <div class="glow"></div>
+          <div class="bouquet">
+            <div class="stem s1"></div><div class="stem s2"></div><div class="stem s3"></div>
+            <div class="stem s4"></div><div class="stem s5"></div><div class="stem s6"></div>
+            <div class="flower f1"><i></i><i></i><i></i><i></i><b></b></div>
+            <div class="flower f2"><i></i><i></i><i></i><i></i><b></b></div>
+            <div class="flower f3"><i></i><i></i><i></i><i></i><b></b></div>
+            <div class="flower f4"><i></i><i></i><i></i><i></i><b></b></div>
+            <div class="flower f5"><i></i><i></i><i></i><i></i><b></b></div>
+            <div class="flower f6"><i></i><i></i><i></i><i></i><b></b></div>
+            <div class="wrap"></div>
+            <div class="ribbon">♡</div>
+          </div>
+        </div>
+
+        <div class="bouquet-caption">
+          <h3>Six little flowers, one big feeling.</h3>
+          <p>And somehow, even this isn't enough to say everything I feel for you.</p>
+        </div>
+
+        <button class="primary center" data-next="messageScreen">There's a note for you →</button>
+      </div>
+    </section>
+
+    <!-- 4. MESSAGE -->
+    <section class="screen" id="messageScreen">
+      <div class="glass card letter-card">
+        <p class="eyebrow">02 · A note</p>
+        <h2>My love,</h2>
+        <div class="letter">
+          <p>I honestly don't think I'll ever find enough words to explain how much you mean to me. ❤️ You've become such a beautiful part of my life, and somehow even the smallest moments with you feel special to me.</p>
+          <p>I love your joyful smile, your little habits, the way you talk, the way you get shy, your expressions, and all those tiny things that make you <em>you</em>.</p>
+          <p>I want you to know that I love you not only on your good days, but through every mood, every insecurity, every difficult moment, and every little version of you.</p>
+          <p>So whenever you see these flowers, remember this: somewhere out there is a boy who is ridiculously grateful that he gets to love you.</p>
+          <p class="signature">Always yours,<br><strong>Shrawan ♡</strong></p>
+        </div>
+        <button class="primary" data-next="musicScreen">One more thing →</button>
+      </div>
+    </section>
+
+    <!-- 5. MUSIC -->
+    <section class="screen" id="musicScreen">
+      <div class="glass card music-card">
+        <div class="record">
+          <div class="record-center">♫</div>
+        </div>
+        <p class="eyebrow">03 · Our song</p>
+        <h2>Press play and stay here for a moment.</h2>
+        <p>The song will open in YouTube. Come back here when you're ready for the last surprise.</p>
+        <div class="music-actions">
+          <button class="primary" id="youtubeBtn">Play our song ↗</button>
+          <button class="secondary" data-next="finalScreen">I'm ready →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FINALE -->
+    <section class="screen" id="finalScreen">
+      <div class="final-glow"></div>
+      <div class="glass card final-card">
+        <div class="heart-burst">♥</div>
+        <p class="eyebrow">04 · Finally</p>
+        <h2>Pretty Samika,</h2>
+        <p class="final-text">If I could turn every feeling I have for you into a flower, I'd need a whole garden.</p>
+        <p class="final-text">Thank you for being you. I love you. More than this little website could ever explain.</p>
+        <div class="final-sign">🌷 With all my love, Shrawan 🌷</div>
+        <button class="secondary" id="replay">Replay the whole thing</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="music-toast" id="toast">Our song is ready ♫</div>
+  <script src="script.js"></script>
+</body>
+</html>
